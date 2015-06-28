@@ -27,7 +27,7 @@
 	}
 
 	/**
-	 * @desc 检查dom是否满足selector Deprecated 
+	 * @desc 检查dom是否满足selector
 	 *
 	 * @param[object] 检查的dom对象
 	 * @param[string] selector的字符串
@@ -36,7 +36,7 @@
 		if (!selectorStr) {
 			return true;
 		};
-		var arr = this.dom.querySelectorAll(selectorStr);
+		var arr = dom.parentNode.querySelectorAll(selectorStr);
 		return Array.prototype.indexOf.call(arr,dom) >= 0 ? true : false; 
 	}
 
