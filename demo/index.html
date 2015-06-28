@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="format-detection" content="telphone=no, email=no" />
+<title>Demo</title>
+</head>
+<body style="height:100%">
+	<div class="container">
+		<p id="title">TITLE</p>
+	</div>
+<script src="../touch-assisant.js"></script>
+<script>
+	var dom = document.querySelector(".container");
+	var title = document.querySelector("#title");
+	var ev = new Event("look", {"bubbles":true, "cancelable":false});
+// navigator.geolocation.getCurrentPosition(function(position) {
+  
+//   dom.innerText = "latitude:" + position.coords.latitude + "; longitude:" + position.coords.longitude;
+// });
+	var a = window.util.TouchAss(dom);
+	a.on("swipeEnd",function() {
+		title.innerText = "swipeEnd";
+	})
+	a.on("swipeStart",function() {
+		title.innerText = "swipeStart";
+	})	
+	a.on("swipeLeft",function() {
+		title.innerText = "swipeLeft";
+	})		
+</script>
+</body>
+</html>
