@@ -286,10 +286,8 @@
      * @param[Object] 传入的Dom对象
      * @param[Object] 额外的参数对象
      */
-	 var Touch = function(Dom,param){
-	 	var param = param || {};
+	 var Touch = function(Dom){
 		this.dom = Dom;	
-		this.on = ON;
 		initEventListener.call(this,this.dom);
 		
 	 }
