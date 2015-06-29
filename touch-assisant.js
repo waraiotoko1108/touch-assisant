@@ -294,7 +294,7 @@
 		
 	 }
 
-	 Touch['on'] = ON
+	 Touch.prototype['on'] = ON
 
 	return function(dom){
 		return new Touch(dom)
