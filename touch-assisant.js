@@ -269,7 +269,7 @@
 				Trigger.call(that,"swipe" + direction,e);
 			}else{
 				actionEnd();
-				Trigger.call(that,'singleTap',e);
+				//Trigger.call(that,'singleTap',e);
 			}
 			actionEnd();
 		}

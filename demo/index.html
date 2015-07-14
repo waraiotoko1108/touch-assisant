@@ -4,16 +4,34 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <meta name="format-detection" content="telphone=no, email=no" />
+<style>
+	#title{
+		color: red;
+	}
+</style>
 <title>Demo</title>
 </head>
 <body style="height:100%">
 	<div class="container">
 		<p id="title">TITLE</p>
+		<p id="title">TITLE</p>
+		<div id="devicePixelRatio"></div>
+		<div id="deviceWidth"></div>
+		<div id="deviceHeight"></div>
 	</div>
+
 <script src="../touch-assisant.js"></script>
 <script>
 	var dom = document.querySelector(".container");
 	var title = document.querySelector("#title");
+	var elDevicePixelRatio = document.querySelector("#devicePixelRatio");
+	var elDeviceWidth = document.querySelector("#deviceWidth");
+	var elDeviceHeight = document.querySelector("#deviceHeight");
+
+	elDevicePixelRatio.innerText = "devicePixelRatio:" + this.devicePixelRatio;
+	elDeviceWidth.innerText = "deviceWidth:" + screen.width;
+	elDeviceHeight.innerText = "deviceHeight:" + screen.height;
+
 	var ev = new Event("look", {"bubbles":true, "cancelable":false});
 // navigator.geolocation.getCurrentPosition(function(position) {
   
@@ -29,6 +47,11 @@
 	a.on("swipeLeft",function() {
 		title.innerText = "swipeLeft";
 	})		
+	dom.addEventListener("look", function(e) {
+		debugger;
+	
+		
+	},false);
 </script>
 </body>
 </html>
